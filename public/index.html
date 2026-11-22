@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Каталог товаров</title>
+  
+  <style>
+    @font-face {
+      font-family: "MyFont";
+      src: url("fonts/georgia.ttf") format("truetype");
+      font-display: swap;
+    }
+
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "MyFont", Georgia, "Times New Roman", serif;
+  background: #f5f5f5;
+}
+ 
+h1 {
+  text-align: center;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+ 
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+}
+ 
+.card img {
+  width: 100%;
+  /*height: 200px;*/
+  object-fit: cover;
+}
+.search {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 20px;
+      padding: 10px;
+      font-size: 16px;
+    }
+ 
+    .stats {
+      position: fixed;
+      right: 10px;
+      bottom: 10px;
+      padding: 10px 14px;
+      background: #1f4e79;
+      color: #ffffff;
+      border-radius: 8px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .more {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 24px;
+      font-size: 16px;
+    }
+
+    .up {
+      position: fixed;
+      left: 10px;
+      bottom: 10px;
+      padding: 10px 14px;
+      display: none;
+    }
+
+  </style>
+  <link rel="stylesheet" href="style.css"
+  media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="style.css">
+  </noscript>
+</head>
+<body>
+ 
+  <h1>Каталог товаров</h1>
+   <p id="clock"></p>
+  <input class="search" id="search" placeholder="Поиск по названию">
+ 
+  <div class="stats">
+    <div id="filterRuns">Поиск запускался: 0</div>
+    <div id="scrollRuns">Прокрутка обработана: 0</div>
+    <div id="handlers">Обработчиков кнопок: 0</div>
+    <div id="nodes">Элементов на странице: 0</div>
+    <div id="fromCache">Из кеша: 0 из 0</div>
+    <div id="loaded">Скачано: 0 кБ</div>
+    <div id="total">Найдено: 0, показано: 0</div>
+    <div id="cart">В корзине: 0</div>
+  </div>
+ 
+  <button class="up" id="up">Наверх</button>
+ 
+  <main class="cards">
+ 
+  </main>
+ <button class="more" id="more">Показать ещё</button>
+  <script src="script.js"></script>
+ 
+
+
+
+ 
+</body>
+</html>
